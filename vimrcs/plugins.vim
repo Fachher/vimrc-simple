@@ -1,31 +1,17 @@
 call plug#begin('~/.vim_runtime/plugged')
 	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } 
 	Plug 'scrooloose/nerdcommenter'
-	Plug 'dracula/vim', { 'as': 'dracula' }
-	Plug 'jiangmiao/auto-pairs'
 	Plug 'kien/ctrlp.vim'
-	Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp', 'java', 'js', 'ts', 'sh'] }
-	if has('macunix')
-		Plug 'vim-airline/vim-airline'
-	endif
-	Plug 'terryma/vim-multiple-cursors'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-fugitive'
-	Plug 'rust-lang/rust.vim'
 	Plug 'majutsushi/tagbar'
 	Plug 'rking/ag.vim'
-	Plug 'leafgarland/typescript-vim'
 	Plug 'Quramy/vim-js-pretty-template'
 	Plug 'andreshazard/vim-logreview'
-	Plug 'rakr/vim-one'
-	Plug 'suoto/vim-hdl'
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
-	Plug 'vim-scripts/groovy.vim'
 	Plug 'MattesGroeger/vim-bookmarks'
-	Plug 'isRuslan/vim-es6'
-	Plug 'udalov/kotlin-vim'
-	Plug 'posva/vim-vue'
+	Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -43,20 +29,12 @@ let g:tagbar_ctags_bin = '/usr/bin/ctags'
 let g:tagbar_autofocus = 1
 let g:auto_save = 1
 let g:auto_save_events = ["InsertLeave"]
-let g:ycm_global_ycm_extra_conf = "~/.vim_runtime/.ycm_extra_conf.py"
-let g:ycm_confirm_extra_conf = 0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:deoplete#enable_at_startup = 1
-color dracula
-let g:airline_theme='dracula'
 
-" Typscript plugin configuration
-let g:typescript_compiler_binary = 'tsc'
-let g:typescript_compiler_options = ''
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
-"autocmd FileType typescript JsPreTmpl html
-"autocmd FileType typescript syn clear foldBraces
+color dracula
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -64,4 +42,3 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
-let NERDTreeShowHidden=1
