@@ -6,6 +6,7 @@ call plug#begin('~/.vim_runtime/plugged')
 	Plug 'tpope/vim-fugitive'
 	Plug 'majutsushi/tagbar'
 	Plug 'rking/ag.vim'
+	Plug 'wincent/terminus'
 	Plug 'Quramy/vim-js-pretty-template'
 	Plug 'andreshazard/vim-logreview'
 	Plug 'SirVer/ultisnips'

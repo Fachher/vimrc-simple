@@ -15,7 +15,8 @@ set exrc
 set secure
 set ignorecase
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-set list
+" do not show white space
+set nolist
 let mapleader = ","
 let g:mapleader = ","
 syntax on
