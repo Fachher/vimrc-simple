@@ -16,6 +16,7 @@ set secure
 set ignorecase
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set nolist
+set hlsearch
 filetype indent on
 let mapleader = ","
 let g:mapleader = ","
