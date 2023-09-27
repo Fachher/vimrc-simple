@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim_runtime/vimrcs/plugged')
 	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } 
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'dracula/vim', { 'as': 'dracula' }
